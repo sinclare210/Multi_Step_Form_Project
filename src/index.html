@@ -26,13 +26,15 @@
 
 <body class="bg-Lightblue w-full h-screen flex items-center justify-center">
   <!-- PersonalInfo -->
-  <div class="bg-White flex rounded-lg p-2 shadow-lg hidden">
+  <div class="bg-White flex rounded-lg p-2 shadow-lg" id="personalinfo">
 
     <div class="bg-[url('./images/bg-sidebar-desktop.svg')] bg-contain bg-no-repeat p-5 rounded-l-lg">
       <div class="p-5 space-y-8">
 
         <div class="flex items-center">
-          <div class="w-10 h-10 flex items-center justify-center text-black bg-Lightblue rounded-full">
+          <div
+            class="w-10 h-10 flex items-center justify-center text-black bg-Lightblue rounded-full border-2 border-White"
+            id="one">
             1
           </div>
           <div class="ml-4">
@@ -42,17 +44,17 @@
         </div>
 
         <div class="flex items-center">
-          <div class="w-10 h-10 flex items-center justify-center text-black bg-Lightblue rounded-full">
+          <div class="w-10 h-10 flex items-center justify-center text-black rounded-full border-2 border-White">
             2
           </div>
-          <div class="ml-4">
+          <div class=" ml-4">
             <p class="font-ubuntu text-Coolgray whitespace-nowrap">STEP 2</p>
             <h3 class="font-ubuntu text-lg text-White font-bold whitespace-nowrap">SELECT PLAN</h3>
           </div>
         </div>
 
         <div class="flex items-center">
-          <div class="w-10 h-10 flex items-center justify-center text-black bg-Lightblue rounded-full">
+          <div class="w-10 h-10 flex items-center justify-center text-black  rounded-full border-2 border-White">
             3
           </div>
           <div class="ml-4">
@@ -62,7 +64,7 @@
         </div>
 
         <div class="flex items-center">
-          <div class="w-10 h-10 flex items-center justify-center text-black bg-Lightblue rounded-full">
+          <div class="w-10 h-10 flex items-center justify-center text-black rounded-full border-2 border-White">
             4
           </div>
           <div class="ml-4">
@@ -84,20 +86,20 @@
           <div>
             <p class="text-base font-ubuntu font-bold">Name</p>
             <input type="text" class="w-full border-Lightgray px-2 py-2 border-2 rounded-lg"
-              placeholder="e.g. Stephen King">
+              placeholder="e.g. Stephen King" required>
           </div>
           <div>
             <p class="text-base font-ubuntu font-bold">Email Address</p>
             <input type="email" class="w-full border-Lightgray px-2 py-2 border-2 rounded-lg"
-              placeholder="e.g.stephenking@lorem.com">
+              placeholder="e.g.stephenking@lorem.com" required>
           </div>
           <div>
             <p class="text-base font-ubuntu font-bold">Phone Number</p>
             <input type="text" class="w-full border-Lightgray px-2 py-2 border-2 rounded-lg"
-              placeholder="e.g. +1 234 567 890">
+              placeholder="e.g. +1 234 567 890" required>
           </div>
         </div>
-        <div class="flex justify-end py-2">
+        <div class="flex justify-end py-2" id="nextper">
           <a href="#" class="px-6 py-3 bg-Marineblue font-ubuntu text-White rounded-lg mt-7 text-base">Next Step</a>
         </div>
       </form>
@@ -105,23 +107,23 @@
   </div>
 
   <!-- selectPlanPage -->
-  <div class="bg-White rounded-lg p-2 shadow-lg hidden">
-
-    <div class="bg-[url('./images/bg-sidebar-desktop.svg')] bg-contain bg-no-repeat p-5 rounded-l-lg">
-      <div class="p-5 space-y-8">
+  <div class="bg-White rounded-lg p-2 shadow-lg flex hidden" id="selectPlanPage">
+    <div class=" bg-[url('./images/bg-sidebar-desktop.svg')] bg-contain bg-no-repeat p-5 rounded-l-lg">
+      <div class=" space-y-8">
 
         <div class="flex items-center">
-          <div class="w-10 h-10 flex items-center justify-center text-black bg-Lightblue rounded-full">
+          <div class="w-10 h-10 flex items-center justify-center text-black  rounded-full border-2 border-White">
             1
           </div>
-          <div class="ml-4">
+          <div class=" ml-4">
             <p class="font-ubuntu text-Coolgray whitespace-nowrap">STEP 1</p>
             <h3 class="font-ubuntu text-lg text-White font-bold whitespace-nowrap">YOUR INFO</h3>
           </div>
         </div>
 
         <div class="flex items-center">
-          <div class="w-10 h-10 flex items-center justify-center text-black bg-Lightblue rounded-full">
+          <div class="w-10 h-10 flex items-center justify-center text-black  rounded-full border-2 border-White"
+            id="two">
             2
           </div>
           <div class="ml-4">
@@ -131,7 +133,7 @@
         </div>
 
         <div class="flex items-center">
-          <div class="w-10 h-10 flex items-center justify-center text-black bg-Lightblue rounded-full">
+          <div class="w-10 h-10 flex items-center justify-center text-black  rounded-full border-2 border-White">
             3
           </div>
           <div class="ml-4">
@@ -141,7 +143,7 @@
         </div>
 
         <div class="flex items-center">
-          <div class="w-10 h-10 flex items-center justify-center text-black bg-Lightblue rounded-full">
+          <div class="w-10 h-10 flex items-center justify-center text-black border-2 border-White rounded-full">
             4
           </div>
           <div class="ml-4">
@@ -200,150 +202,6 @@
           </p>
         </div>
 
-
-
-
-
-
-      </div>
-      <div class="flex justify-end py-2">
-        <a href="#" class="px-6 py-3 bg-Marineblue font-ubuntu text-White rounded-lg mt-7 text-base">Next Step</a>
-      </div>
-
-    </div>
-  </div>
-  <!-- pickaddons -->
-  <div class="bg-White flex rounded-lg p-2 shadow-lg hidden">
-
-    <div class="bg-[url('./images/bg-sidebar-desktop.svg')] bg-contain bg-no-repeat p-5 rounded-l-lg">
-      <div class="p-5 space-y-8">
-
-        <div class="flex items-center">
-          <div class="w-10 h-10 flex items-center justify-center text-black bg-Lightblue rounded-full">
-            1
-          </div>
-          <div class="ml-4">
-            <p class="font-ubuntu text-Coolgray whitespace-nowrap">STEP 1</p>
-            <h3 class="font-ubuntu text-lg text-White font-bold whitespace-nowrap">YOUR INFO</h3>
-          </div>
-        </div>
-
-        <div class="flex items-center">
-          <div class="w-10 h-10 flex items-center justify-center text-black bg-Lightblue rounded-full">
-            2
-          </div>
-          <div class="ml-4">
-            <p class="font-ubuntu text-Coolgray whitespace-nowrap">STEP 2</p>
-            <h3 class="font-ubuntu text-lg text-White font-bold whitespace-nowrap">SELECT PLAN</h3>
-          </div>
-        </div>
-
-        <div class="flex items-center">
-          <div class="w-10 h-10 flex items-center justify-center text-black bg-Lightblue rounded-full">
-            3
-          </div>
-          <div class="ml-4">
-            <p class="font-ubuntu text-Coolgray whitespace-nowrap">STEP 3</p>
-            <h3 class="font-ubuntu text-lg text-White font-bold whitespace-nowrap">ADD-ONS</h3>
-          </div>
-        </div>
-
-        <div class="flex items-center">
-          <div class="w-10 h-10 flex items-center justify-center text-black bg-Lightblue rounded-full">
-            4
-          </div>
-          <div class="ml-4">
-            <p class="font-ubuntu text-Coolgray whitespace-nowrap">STEP 4</p>
-            <h3 class="font-ubuntu text-lg text-White font-bold whitespace-nowrap">SUMMARY</h3>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Form Area -->
-    <div class="py-10 px-12">
-      <h1 class="text-Marineblue font-ubuntu text-2xl font-bold">Pick add-ons </h1>
-      <p class="font-ubuntu text-base text-Coolgray mb-5">
-        Add-ons help enhance your gaming
-        experience.
-      </p>
-
-      <div class="space-y-3 flex flex-col">
-        <div class="bg-White border-2 border-Coolgray rounded-lg">
-          <div class="flex space-x-4 p-4">
-            <div class="flex items-center">
-              <input id="checkbox" type="checkbox"
-                class="form-checkbox h-5 w-5 text-blue-600 transition duration-150 ease-in-out">
-              <label for="checkbox" class="ml-2 text-sm font-medium text-gray-900"></label>
-            </div>
-            <div class="flex justify-between items-center space-x-6">
-              <div>
-                <h1 class="font-ubuntu text-lg text-Marineblue font-bold">
-                  Online Services
-                </h1>
-                <p class="whitespace-nowrap font-ubuntu text-Coolgray">
-                  Access to multiplayer games
-                </p>
-              </div>
-              <div class="">
-                <p>
-                  +$1/mo
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="bg-White border-2 border-Coolgray rounded-lg">
-          <div class="flex space-x-4 p-4">
-            <div class="flex items-center">
-              <input id="checkbox" type="checkbox"
-                class="form-checkbox h-5 w-5 text-blue-600 transition duration-150 ease-in-out">
-              <label for="checkbox" class="ml-2 text-sm font-medium text-gray-900"></label>
-            </div>
-            <div class="flex justify-between items-center space-x-6">
-              <div>
-                <h1 class="font-ubuntu text-lg text-Marineblue font-bold">
-                  Larger storage
-                </h1>
-                <p class="whitespace-nowrap font-ubuntu text-Coolgray">
-                  Extra 1TB of cloud save
-                </p>
-              </div>
-              <div>
-                <p>
-                  +$1/mo
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="bg-White border-2 border-Coolgray rounded-lg">
-          <div class="flex space-x-4 p-4">
-            <div class="flex items-center">
-              <input id="checkbox" type="checkbox"
-                class="form-checkbox h-5 w-5 text-blue-600 transition duration-150 ease-in-out">
-              <label for="checkbox" class="ml-2 text-sm font-medium text-gray-900"></label>
-            </div>
-            <div class="flex justify-between items-center space-x-6">
-              <div>
-                <h1 class="font-ubuntu text-lg text-Marineblue font-bold">
-                  Customizable Profile
-                </h1>
-                <p class="whitespace-nowrap font-ubuntu text-Coolgray">
-                  Custom theme on your
-                  profile
-                </p>
-              </div>
-              <div>
-                <p>
-                  +$1/mo
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
       <div class="pt-14 flex flex-row-reverse justify-between">
         <div>
@@ -351,13 +209,160 @@
             Step</a>
         </div>
         <div>
-          <a href="#" class="px-6 py-3 bg-Coolgray text-White rounded-lg font-ubuntu font-bold">Go
+          <a href="#" class="px-6 py-3 bg-Coolgray text-White rounded-lg font-ubuntu font-bold" id="goBackSelect">Go
             Back</a>
         </div>
       </div>
 
     </div>
 
+    <!-- pickaddons -->
+    <div class="bg-White flex rounded-lg p-2 shadow-lg hidden" id="pickaddons">
+
+      <div class="bg-[url('./images/bg-sidebar-desktop.svg')] bg-contain bg-no-repeat p-5 rounded-l-lg">
+        <div class="p-5 space-y-8">
+
+          <div class="flex items-center">
+            <div class="w-10 h-10 flex items-center justify-center text-black bg-Lightblue rounded-full">
+              1
+            </div>
+            <div class=" ml-4">
+              <p class="font-ubuntu text-Coolgray whitespace-nowrap">STEP 1</p>
+              <h3 class="font-ubuntu text-lg text-White font-bold whitespace-nowrap">YOUR INFO</h3>
+            </div>
+          </div>
+
+          <div class="flex items-center">
+            <div class="w-10 h-10 flex items-center justify-center text-black rounded-full">
+              2
+            </div>
+            <div class=" ml-4">
+              <p class="font-ubuntu text-Coolgray whitespace-nowrap">STEP 2</p>
+              <h3 class="font-ubuntu text-lg text-White font-bold whitespace-nowrap">SELECT PLAN</h3>
+            </div>
+          </div>
+
+          <div class="flex items-center">
+            <div class="w-10 h-10 flex items-center justify-center text-black rounded-full" id="three">
+              3
+            </div>
+            <div class="ml-4">
+              <p class="font-ubuntu text-Coolgray whitespace-nowrap">STEP 3</p>
+              <h3 class="font-ubuntu text-lg text-White font-bold whitespace-nowrap">ADD-ONS</h3>
+            </div>
+          </div>
+
+          <div class="flex items-center">
+            <div class="w-10 h-10 flex items-center justify-center text-black  rounded-full">
+              4
+            </div>
+            <div class="ml-4">
+              <p class="font-ubuntu text-Coolgray whitespace-nowrap">STEP 4</p>
+              <h3 class="font-ubuntu text-lg text-White font-bold whitespace-nowrap">SUMMARY</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Form Area -->
+      <div class="py-10 px-12">
+        <h1 class="text-Marineblue font-ubuntu text-2xl font-bold">Pick add-ons </h1>
+        <p class="font-ubuntu text-base text-Coolgray mb-5">
+          Add-ons help enhance your gaming
+          experience.
+        </p>
+
+        <div class="space-y-3 flex flex-col">
+          <div class="bg-White border-2 border-Coolgray rounded-lg">
+            <div class="flex space-x-4 p-4">
+              <div class="flex items-center">
+                <input id="checkbox" type="checkbox"
+                  class="form-checkbox h-5 w-5 text-blue-600 transition duration-150 ease-in-out">
+                <label for="checkbox" class="ml-2 text-sm font-medium text-gray-900"></label>
+              </div>
+              <div class="flex justify-between items-center space-x-6">
+                <div>
+                  <h1 class="font-ubuntu text-lg text-Marineblue font-bold">
+                    Online Services
+                  </h1>
+                  <p class="whitespace-nowrap font-ubuntu text-Coolgray">
+                    Access to multiplayer games
+                  </p>
+                </div>
+                <div class="">
+                  <p>
+                    +$1/mo
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="bg-White border-2 border-Coolgray rounded-lg">
+            <div class="flex space-x-4 p-4">
+              <div class="flex items-center">
+                <input id="checkbox" type="checkbox"
+                  class="form-checkbox h-5 w-5 text-blue-600 transition duration-150 ease-in-out">
+                <label for="checkbox" class="ml-2 text-sm font-medium text-gray-900"></label>
+              </div>
+              <div class="flex justify-between items-center space-x-6">
+                <div>
+                  <h1 class="font-ubuntu text-lg text-Marineblue font-bold">
+                    Larger storage
+                  </h1>
+                  <p class="whitespace-nowrap font-ubuntu text-Coolgray">
+                    Extra 1TB of cloud save
+                  </p>
+                </div>
+                <div>
+                  <p>
+                    +$1/mo
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-White border-2 border-Coolgray rounded-lg">
+            <div class="flex space-x-4 p-4">
+              <div class="flex items-center">
+                <input id="checkbox" type="checkbox"
+                  class="form-checkbox h-5 w-5 text-blue-600 transition duration-150 ease-in-out">
+                <label for="checkbox" class="ml-2 text-sm font-medium text-gray-900"></label>
+              </div>
+              <div class="flex justify-between items-center space-x-6">
+                <div>
+                  <h1 class="font-ubuntu text-lg text-Marineblue font-bold">
+                    Customizable Profile
+                  </h1>
+                  <p class="whitespace-nowrap font-ubuntu text-Coolgray">
+                    Custom theme on your
+                    profile
+                  </p>
+                </div>
+                <div>
+                  <p>
+                    +$1/mo
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pt-14 flex flex-row-reverse justify-between">
+          <div>
+            <a href="#" class="px-6 py-3 bg-Marineblue text-White rounded-lg font-ubuntu font-bold">Next
+              Step</a>
+          </div>
+          <div>
+            <a href="#" class="px-6 py-3 bg-Coolgray text-White rounded-lg font-ubuntu font-bold">Go
+              Back</a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
   </div>
 
   <!-- Finishingup -->
@@ -544,6 +549,6 @@
     Coded by <a href="#">Your Name Here</a>.
   </div>
 </body>
-
+<script src="/main.js"></script>
 
 </html>
