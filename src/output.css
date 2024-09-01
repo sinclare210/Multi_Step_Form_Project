@@ -577,6 +577,16 @@ video {
   margin-right: auto;
 }
 
+.mx-4{
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.mx-12{
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
+
 .mb-2{
   margin-bottom: 0.5rem;
 }
@@ -607,6 +617,10 @@ video {
 
 .mt-7{
   margin-top: 1.75rem;
+}
+
+.ml-3{
+  margin-left: 0.75rem;
 }
 
 .flex{
@@ -643,6 +657,15 @@ video {
 
 .h-screen{
   height: 100vh;
+}
+
+.h-full{
+  height: 100%;
+}
+
+.h-fit{
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 .w-1\/2{
@@ -691,6 +714,10 @@ video {
 
 .grid-cols-3{
   grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.flex-row{
+  flex-direction: row;
 }
 
 .flex-row-reverse{
@@ -862,6 +889,10 @@ video {
   background-size: contain;
 }
 
+.bg-cover{
+  background-size: cover;
+}
+
 .bg-no-repeat{
   background-repeat: no-repeat;
 }
@@ -928,6 +959,21 @@ video {
 .py-3{
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
+}
+
+.py-4{
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.py-20{
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.py-0{
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
 
 .pt-14{
@@ -1047,4 +1093,14 @@ video {
 .hover\:ring-Pastelblue:hover{
   --tw-ring-opacity: 1;
   --tw-ring-color: hsl(228 100% 84% / var(--tw-ring-opacity));
+}
+
+@media (min-width: 1024px){
+  .lg\:p-6{
+    padding: 1.5rem;
+  }
+
+  .lg\:p-12{
+    padding: 3rem;
+  }
 }
