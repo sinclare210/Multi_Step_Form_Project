@@ -30,13 +30,71 @@ const confirm = document.getElementById("confirm");
 
 const lastpage = document.getElementById("lastpage");
 
+const namee = document.getElementById("name");
+
+const email = document.getElementById("email");
+
+const number = document.getElementById("number");
+
+const feina = document.getElementById("feina");
+
+const feiema = document.getElementById("feiema");
+
+const feinom = document.getElementById("feinom");
+
+const togglecheckbox = document.getElementById("togglecheckbox");
+
+const arcadeprice = document.getElementById("arcadeprice");
+
+const advanceprice = document.getElementById("advanceprice");
+
+const proprice = document.getElementById("proprice");
+
+
+
+
+ togglecheckbox.addEventListener("change", (event) => {
+    if (event.target.checked) {
+        arcadeprice.textContent = "$90/yr";
+        advanceprice.textContent = "$120/yr";
+        proprice.textContent = "$150/yr";
+
+    }else{
+                arcadeprice.textContent = "$9/mo";
+        advanceprice.textContent = "$12/mo";
+        proprice.textContent = "$15/mo";
+    }
+})
+
+
+
+const validateInputs = () => {
+    return namee.value.trim() !== "" && email.value.trim() !== "" && number.value.trim() !== "";
+};
+
 
 nextper.addEventListener("click", () => {
-    one.classList.remove("bg-Lightblue");
-    two.classList.add("bg-Lightblue");
-    personalinfo.classList.add("hidden");
-    selectPlanPage.classList.remove("hidden");
-})
+    if (validateInputs()) {
+        // Only go to the next page if all inputs are filled
+        one.classList.remove("bg-Lightblue");
+        two.classList.add("bg-Lightblue");
+        personalinfo.classList.add("hidden");
+        selectPlanPage.classList.remove("hidden");
+        feina.classList.add("hidden");
+        feiema.classList.add("hidden");
+        feinom.classList.add("hidden");
+    } else {
+        if(namee.value.trim() == ""){
+            feina.classList.remove("hidden")
+        }
+        if(email.value.trim() == ""){
+            feiema.classList.remove("hidden");
+        }
+        if(number.value.trim() == ""){
+            feinom.classList.remove("hidden");
+        }
+    }
+});
 
 goBackSelect.addEventListener("click", () => {
     one.classList.add("bg-Lightblue");
@@ -83,7 +141,3 @@ confirm.addEventListener("click", () => {
         lastpage.classList.remove("hidden");
 
 })
-
-
-
-
