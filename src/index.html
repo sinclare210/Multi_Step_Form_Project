@@ -361,7 +361,7 @@
   </div>
 
   <!-- Finishingup -->
-  <div class="bg-White flex rounded-lg p-2">
+  <div class="bg-White flex rounded-lg p-2 hidden">
 
     <div class="bg-[url('./images/bg-sidebar-desktop.svg')] bg-contain bg-no-repeat p-5 rounded-l-lg">
       <div class="p-5 space-y-8">
@@ -415,25 +415,49 @@
         Double-check everything looks OK before
         confirming.
       </p>
-      <form action="#">
-        <div class="space-y-6">
-          <div>
-            <p class="text-base font-ubuntu font-bold">Name</p>
-            <input type="text" class="w-full border-Lightgray px-2 py-2 border-2 rounded-lg"
-              placeholder="e.g. Stephen King">
+
+      <div class="">
+        <div>
+          <div class="bg-Magnolia p-4 flex justify-between items-center rounded-t-lg">
+            <div>
+              <h1 class="font-ubuntu font-bold text-Marineblue text-lg">Arcade(Monthly)</h1>
+              <a class="font-ubuntu text-base text-Coolgray underline cursor-pointer">
+                Change
+              </a>
+            </div>
+            <div>
+              <h1 class="font-ubuntu font-bold text-Marineblue text-lg">
+                $9/mo
+              </h1>
+            </div>
           </div>
-          <div>
-            <p class="text-base font-ubuntu font-bold">Email Address</p>
-            <input type="email" class="w-full border-Lightgray px-2 py-2 border-2 rounded-lg"
-              placeholder="e.g.stephenking@lorem.com">
+          <div
+            class="bg-Magnolia p-4 flex flex-col justify-between items-center rounded-b-lg border-t-2 border-Coolgray">
+            <div class="flex w-full justify-between items-center mb-2">
+              <p class="font-ubuntu font-bold text-Coolgray text-base">Online Services</p>
+              <p class="font-ubuntu  text-Marineblue text-base">+$1/mo</p>
+            </div>
+            <div class="flex w-full justify-between items-center">
+              <p class="font-ubuntu font-bold text-Coolgray text-base">Larger Storage</p>
+              <p class="font-ubuntu  text-Marineblue text-base">+$2/mo</p>
+            </div>
           </div>
-          <div>
-            <p class="text-base font-ubuntu font-bold">Phone Number</p>
-            <input type="text" class="w-full border-Lightgray px-2 py-2 border-2 rounded-lg"
-              placeholder="e.g. +1 234 567 890">
+
+          <div class="bg-Pastelblue">
+            <div class="bg-White p-4 flex flex-col justify-between items-center ">
+
+              <div class="flex w-full justify-between items-center">
+                <p class="font-ubuntu font-bold text-Coolgray text-base">Total(per month)</p>
+                <p class="font-ubuntu  text-Purplishblue text-xl font-bold">+$12/mo</p>
+              </div>
+            </div>
+
+
           </div>
         </div>
-        <div class="pt-14 flex flex-row-reverse justify-between">
+
+        <!-- buttonside -->
+        <div class=" pt-14 flex flex-row-reverse justify-between">
           <div>
             <a href="#" class="px-6 py-3 bg-Purplishblue text-White rounded-lg font-ubuntu font-bold">Confirm
             </a>
@@ -443,15 +467,78 @@
               Back</a>
           </div>
         </div>
-      </form>
 
+      </div>
+    </div>
+  </div>
+  <!-- lastpage -->
+  <div class="bg-White flex rounded-lg mx-auto max-w-4xl mt-10 overflow-hidden hidden">
+    <!-- Sidebar -->
+    <div
+      class="relative bg-[url('./images/bg-sidebar-desktop.svg')] bg-contain bg-no-repeat p-5 rounded-l-lg flex-shrink-0 w-1/2 flex flex-col justify-center">
+
+      <div class="relative z-10 space-y-6">
+        <div class="flex items-center">
+          <div class="w-10 h-10 flex items-center justify-center text-black bg-Lightblue rounded-full">
+            1
+          </div>
+          <div class="ml-4">
+            <p class="font-ubuntu text-Coolgray text-sm">STEP 1</p>
+            <h3 class="font-ubuntu text-lg text-White font-bold">YOUR INFO</h3>
+          </div>
+        </div>
+
+        <div class="flex items-center">
+          <div class="w-10 h-10 flex items-center justify-center text-black bg-Lightblue rounded-full">
+            2
+          </div>
+          <div class="ml-4">
+            <p class="font-ubuntu text-Coolgray text-sm">STEP 2</p>
+            <h3 class="font-ubuntu text-lg text-White font-bold">SELECT PLAN</h3>
+          </div>
+        </div>
+
+        <div class="flex items-center">
+          <div class="w-10 h-10 flex items-center justify-center text-black bg-Lightblue rounded-full">
+            3
+          </div>
+          <div class="ml-4">
+            <p class="font-ubuntu text-Coolgray text-sm">STEP 3</p>
+            <h3 class="font-ubuntu text-lg text-White font-bold">ADD-ONS</h3>
+          </div>
+        </div>
+
+        <div class="flex items-center">
+          <div class="w-10 h-10 flex items-center justify-center text-black bg-Lightblue rounded-full">
+            4
+          </div>
+          <div class="ml-4">
+            <p class="font-ubuntu text-Coolgray text-sm">STEP 4</p>
+            <h3 class="font-ubuntu text-lg text-White font-bold">SUMMARY</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Form Area -->
+    <div class="w-1/2 px-8 py-10 flex flex-col justify-center items-center">
+      <div class="mx-auto mb-6">
+        <img src="./images/icon-thank-you.svg" alt="Thank you" class="w-24 h-24">
+      </div>
+      <div class="mb-4">
+        <h1 class="text-center text-Marineblue font-extrabold text-2xl font-ubuntu">Thank you!</h1>
+      </div>
+      <div>
+        <p class="text-center text-Coolgray font-ubuntu text-base max-w-md mx-auto">
+          Thanks for confirming your subscription! We hope you have fun using our platform. If
+          you ever need support, please feel free to email us at support@loremgaming.com.
+        </p>
+      </div>
     </div>
   </div>
 
-  <!--Pick add-ons Add-ons help enhance your gaming
-    experience. Online service +$2/mo Go Back Next Step Step 3 end Step 4 start  Dynamically add subscription and add-on selections here Total (per month/year) Go Back Confirm step 4
-    end Step 5 start Thank you! Thanks for confirming your subscription! We hope you have fun using our platform. If you
-    ever need support, please feel free to email us at support@loremgaming.com. Step 5 end -->
+
+
   <div class="attribution fixed bottom-0 p-2">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
