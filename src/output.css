@@ -775,6 +775,11 @@ video {
   background-color: hsl(231 11% 63% / var(--tw-bg-opacity));
 }
 
+.bg-Purplishblue{
+  --tw-bg-opacity: 1;
+  background-color: hsl(243 100% 62% / var(--tw-bg-opacity));
+}
+
 .bg-\[url\(\'\.\/images\/bg-sidebar-desktop\.svg\'\)\]{
   background-image: url('./images/bg-sidebar-desktop.svg');
 }
