@@ -183,10 +183,51 @@ confirm.addEventListener("click", () => {
 
 })
 
-const checkboxes = document.querySelectorAll(".form-checkbox");
+const checkboxes = document.querySelectorAll('input[type="checkbox"]');
 
-$("[type=checkbox]").click(function(ev) {
-    console.log("okay")
-  $(this).closest("div").toggleClass("bg-Pastelblue", this.checked);
+const clickrs = document.querySelectorAll(".clickr");
 
-})
+// checkboxes.forEach(checkbox => {
+//     checkbox.addEventListener("change", (event) =>{
+//        if(event.target.checked == true){
+//         console.log(event)
+//         clickrs.forEach((clickr) => {
+
+//         })
+//        }else{
+//         console.log("ok")
+//        }
+       
+        
+        
+//     })
+// })
+// Select all checkboxes
+
+
+// Iterate over each checkbox
+checkboxes.forEach(checkbox => {
+    checkbox.addEventListener("change", (event) => {
+        const checkbox = event.target;
+        const parentDiv = checkbox.closest('.clickr'); // Find the closest parent div with class 'clickr'
+
+        if (checkbox.checked) {
+            console.log('Checkbox checked:', event);
+            if (parentDiv) {
+                parentDiv.style.backgroundColor = ' hsl(231, 100%, 99%)'; 
+                parentDiv.style.borderColor = "hsl(228, 100%, 84%)"
+            }
+        } else {
+            console.log('Checkbox unchecked');
+            if (parentDiv) {
+                parentDiv.style.backgroundColor = ''; 
+                                parentDiv.style.borderColor = ""
+            }
+
+
+        }
+
+    });
+});
+
+

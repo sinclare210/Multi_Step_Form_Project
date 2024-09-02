@@ -629,10 +629,6 @@ video {
   height: 6rem;
 }
 
-.h-48{
-  height: 12rem;
-}
-
 .h-5{
   height: 1.25rem;
 }
@@ -836,11 +832,6 @@ video {
 .bg-White{
   --tw-bg-opacity: 1;
   background-color: hsl(0 0% 100% / var(--tw-bg-opacity));
-}
-
-.bg-Strawberryred{
-  --tw-bg-opacity: 1;
-  background-color: hsl(354 84% 57% / var(--tw-bg-opacity));
 }
 
 .bg-\[url\(\'\.\/images\/bg-sidebar-desktop\.svg\'\)\]{
