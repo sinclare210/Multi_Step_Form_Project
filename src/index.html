@@ -181,20 +181,21 @@
 
       <div class="space-x-2 grid grid-cols-3 ">
         <div
-          class="w-40  border-2 border-Coolgray  items-start justify-between p-6 rounded-lg hover:ring-2  hover:ring-Pastelblue hover:border-0 hover:bg-Alabaster">
+          class="w-40  border-2 border-Coolgray  items-start justify-between p-6 rounded-lg hover:ring-2  hover:ring-Pastelblue hover:border-0 hover:bg-Alabaster clickdiv">
           <img src="./images/icon-arcade.svg" alt="arcade" class="w-12 h-12">
           <h3 class="text-lg text-Marineblue font-ubuntu font-bold mt-10">
             Arcade
           </h3>
-          <p class="font-ubuntu text-Coolgray whitespace-nowrap" id="arcadeprice">
+          <p class=" font-ubuntu text-Coolgray whitespace-nowrap" id="arcadeprice">
             $9/mo
           </p>
           <p class="font-ubuntu  whitespace-nowrap font-semibold">
             2 month free
           </p>
         </div>
+
         <div
-          class="w-40  border-2 border-Coolgray  items-start justify-between p-6 rounded-lg hover:ring-2  hover:ring-Pastelblue hover:border-0 hover:bg-Alabaster">
+          class="w-40  border-2 border-Coolgray  items-start justify-between p-6 rounded-lg hover:ring-2  hover:ring-Pastelblue hover:border-0 hover:bg-Alabaster clickdiv">
           <img src="./images/icon-advanced.svg" alt="arcade" class="w-12 h-12">
           <h3 class="text-lg text-Marineblue font-ubuntu font-bold mt-10">
             Advanced
@@ -207,26 +208,27 @@
           </p>
         </div>
         <div
-          class="w-40 border-2 border-Coolgray  items-start justify-between p-6 rounded-lg hover:ring-2  hover:ring-Pastelblue hover:border-0 hover:bg-Alabaster">
+          class="w-40 border-2 border-Coolgray  items-start justify-between p-6 rounded-lg hover:ring-2  hover:ring-Pastelblue hover:border-0 hover:bg-Alabaster clickdiv">
           <img src="./images/icon-pro.svg" alt="arcade" class="w-12 h-12">
           <h3 class="text-lg text-Marineblue font-ubuntu font-bold mt-10">
             Pro
           </h3>
           <p class="font-ubuntu text-Coolgray whitespace-nowrap" id="proprice">
-            $15/m0
+            $15/mo
           </p>
           <p class="font-ubuntu text-black whitespace-nowrap font-semibold">
             2 month free
           </p>
         </div>
-        <div class="switcher mt-10">
-          <p class="monthly sw-active">Monthly</p>
-          <label class="switch">
-            <input type="checkbox" id="togglecheckbox" />
-            <span class=" slider round"></span>
-          </label>
-          <p class="yearly">Yearly</p>
-        </div>
+      </div>
+      <div class="switcher mt-10">
+        <p class="monthly sw-active">Monthly</p>
+        <label class="switch">
+          <input type="checkbox" id="togglecheckbox" />
+          <span class=" slider round"></span>
+        </label>
+        <p class="yearly">Yearly</p>
+
 
       </div>
       <div class="flex flex-row-reverse justify-between">
@@ -239,8 +241,9 @@
             Back</a>
         </div>
       </div>
-
     </div>
+
+  </div>
   </div>
   <!-- pickaddons -->
   <div class="bg-White flex rounded-lg p-2 shadow-lg hidden" id="pickaddon">
@@ -354,7 +357,7 @@
           <div class="flex space-x-4 p-4">
             <div class="flex items-center">
               <input id="checkbox" type="checkbox"
-                class="form-checkbox h-5 w-5 text-blue-600 transition duration-150 ease-in-out">
+                class="form-checkbox h-5 w-5 text-blue-600 transition duration-150 ease-in-out checked:">
               <label for="checkbox" class="ml-2 text-sm font-medium text-gray-900"></label>
             </div>
             <div class="flex justify-between items-center space-x-6">
@@ -453,13 +456,13 @@
         <div>
           <div class="bg-Magnolia p-4 flex justify-between items-center rounded-t-lg">
             <div>
-              <h1 class="font-ubuntu font-bold text-Marineblue text-lg">Arcade(Monthly)</h1>
+              <h1 class="font-ubuntu font-bold text-Marineblue text-lg" id="finh1"></h1>
               <a class="font-ubuntu text-base text-Coolgray underline cursor-pointer">
                 Change
               </a>
             </div>
             <div>
-              <h1 class="font-ubuntu font-bold text-Marineblue text-lg">
+              <h1 class="font-ubuntu font-bold text-Marineblue text-lg" id="finh1price">
                 $9/mo
               </h1>
             </div>

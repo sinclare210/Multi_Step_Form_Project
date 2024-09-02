@@ -50,6 +50,40 @@ const advanceprice = document.getElementById("advanceprice");
 
 const proprice = document.getElementById("proprice");
 
+const onlineprice = document.getElementById("onlineprice");
+
+const largeprice = document.getElementById("largeprice");
+
+const themeprice = document.getElementById("themeprice");
+
+const clickdivs = document.querySelectorAll(".clickdiv");
+
+const finh1 = document.getElementById("finh1");
+
+const finh1price = document.getElementById("finh1price");
+
+let previousDiv = null;
+
+clickdivs.forEach((clickdiv) => {
+    clickdiv.addEventListener("click", () => {
+        if(previousDiv){
+              previousDiv.classList.remove('bg-Pastelblue');
+            previousDiv.classList.add('hover:ring-Pastelblue', 'hover:border-0', 'hover:bg-Alabaster');
+        }
+         clickdiv.classList.remove('hover:ring-Pastelblue', 'hover:border-0', 'hover:bg-Alabaster');
+          clickdiv.classList.add('bg-Pastelblue');
+
+
+          previousDiv = clickdiv;
+
+          finh1.textContent = clickdiv.querySelector("h3").textContent;
+          finh1price.textContent = clickdiv.querySelector("p").textContent;
+    })
+})
+
+
+
+       
 
 
 
@@ -58,11 +92,18 @@ const proprice = document.getElementById("proprice");
         arcadeprice.textContent = "$90/yr";
         advanceprice.textContent = "$120/yr";
         proprice.textContent = "$150/yr";
+        onlineprice.textContent = "$10/yr";
+        largeprice.textContent = "$20/yr";
+        themeprice.textContent = "$20/yr";
+
 
     }else{
                 arcadeprice.textContent = "$9/mo";
         advanceprice.textContent = "$12/mo";
         proprice.textContent = "$15/mo";
+        onlineprice.textContent = "$1/mo";
+        largeprice.textContent = "$2/mo";
+        themeprice.textContent = "$2/mo";
     }
 })
 
@@ -139,5 +180,13 @@ gofin.addEventListener("click", () =>{
 confirm.addEventListener("click", () => {
       finishingup.classList.add("hidden");
         lastpage.classList.remove("hidden");
+
+})
+
+const checkboxes = document.querySelectorAll(".form-checkbox");
+
+$("[type=checkbox]").click(function(ev) {
+    console.log("okay")
+  $(this).closest("div").toggleClass("bg-Pastelblue", this.checked);
 
 })
