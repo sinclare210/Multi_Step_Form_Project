@@ -98,13 +98,14 @@ clickdivs.forEach((clickdiv) => {
           previousDiv = clickdiv;
           finh1.textContent = clickdiv.querySelector("h3").textContent+"(monthly)"; 
            finh1price.textContent = clickdiv.querySelector("p").textContent; 
+           
 
           togglecheckbox.addEventListener("change", (event) => {
     if (event.target.checked) {
          finh1.textContent = clickdiv.querySelector("h3").textContent+"(yearly)";
           finh1price.textContent = clickdiv.querySelector("p").textContent;
           total.textContent = "Total(per year)"
-
+         
     }else{
             finh1.textContent = clickdiv.querySelector("h3").textContent+"(monthly)";  
              finh1price.textContent = clickdiv.querySelector("p").textContent;
@@ -225,24 +226,24 @@ const checkboxes = document.querySelectorAll('input[type="checkbox"]');
 
 const clickrs = document.querySelectorAll(".clickr");
 
+const Firstcheckbox = document.querySelector('#firstCheck')
 
+const secondcheckbox = document.querySelector('#secondCheck')
 
+const thirdcheckbox = document.querySelector('#thirdCheck')
 
-checkboxes.forEach(checkbox => {
-    checkbox.addEventListener("change", (event) => {
-        const checkbox = event.target;
-        const parentDiv = checkbox.closest('.clickr'); // Find the closest parent div with class 'clickr'
+Firstcheckbox.addEventListener("change", (event) => {
+    const checkbox = event.target;
+    const parentDiv = checkbox.closest('.clickr');
 
-        if (checkbox.checked) {
+    if (checkbox.checked) {
             console.log('Checkbox checked:', event);
             if (parentDiv) {
                 parentDiv.style.backgroundColor = ' hsl(231, 100%, 99%)'; 
                 parentDiv.style.borderColor = "hsl(228, 100%, 84%)";
                 firstaddonh1.textContent = parentDiv.querySelector('#onl h1').textContent.trim();
                 p1.textContent = parentDiv.querySelector("#onl #onlineprice").textContent.trim();
-                p2.textContent = parentDiv.querySelector("#lar #largeprice").textContent.trim();
-                secondaddonh1.textContent = parentDiv.querySelector('#lar h1').textContent.trim();
-                thirdaddonh1.textContent = parentDiv.querySelector('#cus h1').textContent.trim();
+                
 
             }
         } else {
@@ -250,12 +251,59 @@ checkboxes.forEach(checkbox => {
             if (parentDiv) {
                 parentDiv.style.backgroundColor = ''; 
                 parentDiv.style.borderColor = "";
+                firstaddonh1.textContent = "";
+                p1.textContent = "";
             }
-
-
         }
+})
 
-    });
-});
+secondcheckbox.addEventListener("change", (event) => {
+    const checkbox = event.target;
+    const parentDiv = checkbox.closest('.clickr');
 
+    if (checkbox.checked) {
+            console.log('Checkbox checked:', event);
+            if (parentDiv) {
+                parentDiv.style.backgroundColor = ' hsl(231, 100%, 99%)'; 
+                parentDiv.style.borderColor = "hsl(228, 100%, 84%)";
+                p2.textContent = parentDiv.querySelector("#lar #largeprice").textContent.trim();
+                secondaddonh1.textContent = parentDiv.querySelector('#lar h1').textContent.trim();
+                
+
+            }
+        } else {
+            console.log('Checkbox unchecked');
+            if (parentDiv) {
+                parentDiv.style.backgroundColor = ''; 
+                parentDiv.style.borderColor = "";
+                secondaddonh1.textContent = "";
+                p2.textContent = "";
+            }
+        }
+})
+
+thirdcheckbox.addEventListener("change", (event) => {
+    const checkbox = event.target;
+    const parentDiv = checkbox.closest('.clickr');
+
+    if (checkbox.checked) {
+            console.log('Checkbox checked:', event);
+            if (parentDiv) {
+                parentDiv.style.backgroundColor = ' hsl(231, 100%, 99%)'; 
+                parentDiv.style.borderColor = "hsl(228, 100%, 84%)";
+                p3.textContent = parentDiv.querySelector("#cus #themeprice").textContent.trim();
+                thirdaddonh1.textContent = parentDiv.querySelector('#cus h1').textContent.trim();
+                
+
+            }
+        } else {
+            console.log('Checkbox unchecked');
+            if (parentDiv) {
+                parentDiv.style.backgroundColor = ''; 
+                parentDiv.style.borderColor = "";
+                thirdaddonh1.textContent = "";
+                p3.textContent = "";
+            }
+        }
+})
 
