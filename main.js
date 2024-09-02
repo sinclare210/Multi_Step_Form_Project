@@ -78,6 +78,7 @@ const change = document.getElementById("change");
 
 const total = document.getElementById("total");
 
+const totalPrice = document.getElementById("totalPrice");
 change.addEventListener("click", () => {
     finishingup.classList.add("hidden");
     selectPlanPage.classList.remove("hidden");
@@ -112,12 +113,7 @@ clickdivs.forEach((clickdiv) => {
               total.textContent = "Total(per month)"
     }
 })
-
-
-        
-         
-         
-    })
+   })
 })
 
 
@@ -134,6 +130,8 @@ clickdivs.forEach((clickdiv) => {
         onlineprice.textContent = "$10/yr";
         largeprice.textContent = "$20/yr";
         themeprice.textContent = "$20/yr";
+        
+
 
 
     }else{
@@ -143,6 +141,7 @@ clickdivs.forEach((clickdiv) => {
         onlineprice.textContent = "$1/mo";
         largeprice.textContent = "$2/mo";
         themeprice.textContent = "$2/mo";
+        
     }
 })
 
@@ -243,6 +242,19 @@ Firstcheckbox.addEventListener("change", (event) => {
                 parentDiv.style.borderColor = "hsl(228, 100%, 84%)";
                 firstaddonh1.textContent = parentDiv.querySelector('#onl h1').textContent.trim();
                 p1.textContent = parentDiv.querySelector("#onl #onlineprice").textContent.trim();
+    togglecheckbox.addEventListener("change", (event) => {
+    if (event.target.checked) {
+     
+        p1.textContent = "$10/yr";
+         }else{
+         
+        p1.textContent = "$1/mo";
+        
+    }
+})
+
+
+                
                 
 
             }
@@ -268,6 +280,17 @@ secondcheckbox.addEventListener("change", (event) => {
                 parentDiv.style.borderColor = "hsl(228, 100%, 84%)";
                 p2.textContent = parentDiv.querySelector("#lar #largeprice").textContent.trim();
                 secondaddonh1.textContent = parentDiv.querySelector('#lar h1').textContent.trim();
+
+                 togglecheckbox.addEventListener("change", (event) => {
+    if (event.target.checked) {
+     
+        p2.textContent = "$20/yr";
+         }else{
+         
+        p2.textContent = "$2/mo";
+        
+    }
+})
                 
 
             }
@@ -293,6 +316,17 @@ thirdcheckbox.addEventListener("change", (event) => {
                 parentDiv.style.borderColor = "hsl(228, 100%, 84%)";
                 p3.textContent = parentDiv.querySelector("#cus #themeprice").textContent.trim();
                 thirdaddonh1.textContent = parentDiv.querySelector('#cus h1').textContent.trim();
+
+                 togglecheckbox.addEventListener("change", (event) => {
+    if (event.target.checked) {
+     
+        p3.textContent = "$20/yr";
+         }else{
+         
+        p3.textContent = "$2/mo";
+        
+    }
+})
                 
 
             }
@@ -306,4 +340,52 @@ thirdcheckbox.addEventListener("change", (event) => {
             }
         }
 })
+
+//  function to parse price string and convert to number
+const parsePrice = (priceText) => {
+    if (!priceText) return 0;
+    return parseFloat(priceText.replace(/[^\d.]/g, ""));//it is used to extract the numeric value from a string and convert it into a floating-point number
+};
+
+// Function to update the total price
+const updateTotalPrice = () => {
+    let total = 0;
+
+    // Plan price
+    total += parsePrice(finh1price.textContent);
+
+    // Addons prices
+    total += parsePrice(p1.textContent);
+    total += parsePrice(p2.textContent);
+    total += parsePrice(p3.textContent);
+
+    //to know if it is monthly or yearly
+    const isYearly = togglecheckbox.checked;
+    const totalText = isYearly ? ` $${total}/yr` : `$${total}/mo`;
+
+    // Update the total price text
+    totalPrice.textContent = totalText;
+};
+
+
+
+// For Plans
+clickdivs.forEach((clickdiv) => {
+    clickdiv.addEventListener("click", () => {
+
+        updateTotalPrice();
+    });
+});
+
+// For Addons
+Firstcheckbox.addEventListener("change", updateTotalPrice);
+secondcheckbox.addEventListener("change", updateTotalPrice);
+thirdcheckbox.addEventListener("change", updateTotalPrice);
+
+// For  toggler
+togglecheckbox.addEventListener("change", () => {
+    
+    updateTotalPrice(); 
+});
+
 
