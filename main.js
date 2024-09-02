@@ -64,9 +64,24 @@ const finh1price = document.getElementById("finh1price");
 
 const firstaddonh1 = document.getElementById("firstaddonh1");
 
+const p1 = document.getElementById("p1");
+
+const p2 = document.getElementById("p2");
+
+const p3 = document.getElementById("p3");
+
 const secondaddonh1 = document.getElementById("secondaddonh1");
 
 const thirdaddonh1 = document.getElementById("thirdaddonh1");
+
+const change = document.getElementById("change");
+
+const total = document.getElementById("total");
+
+change.addEventListener("click", () => {
+    finishingup.classList.add("hidden");
+    selectPlanPage.classList.remove("hidden");
+})
 
 let previousDiv = null;
 
@@ -81,9 +96,26 @@ clickdivs.forEach((clickdiv) => {
 
 
           previousDiv = clickdiv;
+          finh1.textContent = clickdiv.querySelector("h3").textContent+"(monthly)"; 
+           finh1price.textContent = clickdiv.querySelector("p").textContent; 
 
-          finh1.textContent = clickdiv.querySelector("h3").textContent;
+          togglecheckbox.addEventListener("change", (event) => {
+    if (event.target.checked) {
+         finh1.textContent = clickdiv.querySelector("h3").textContent+"(yearly)";
           finh1price.textContent = clickdiv.querySelector("p").textContent;
+          total.textContent = "Total(per year)"
+
+    }else{
+            finh1.textContent = clickdiv.querySelector("h3").textContent+"(monthly)";  
+             finh1price.textContent = clickdiv.querySelector("p").textContent;
+              total.textContent = "Total(per month)"
+    }
+})
+
+
+        
+         
+         
     })
 })
 
@@ -223,6 +255,8 @@ checkboxes.forEach(checkbox => {
                 parentDiv.style.backgroundColor = ' hsl(231, 100%, 99%)'; 
                 parentDiv.style.borderColor = "hsl(228, 100%, 84%)";
                 firstaddonh1.textContent = parentDiv.querySelector('#onl h1').textContent.trim();
+                p1.textContent = parentDiv.querySelector("#onl #onlineprice").textContent.trim();
+                p2.textContent = parentDiv.querySelector("#lar #largeprice").textContent.trim();
                 secondaddonh1.textContent = parentDiv.querySelector('#lar h1').textContent.trim();
                 thirdaddonh1.textContent = parentDiv.querySelector('#cus h1').textContent.trim();
 
