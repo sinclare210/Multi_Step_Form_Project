@@ -62,6 +62,12 @@ const finh1 = document.getElementById("finh1");
 
 const finh1price = document.getElementById("finh1price");
 
+const firstaddonh1 = document.getElementById("firstaddonh1");
+
+const secondaddonh1 = document.getElementById("secondaddonh1");
+
+const thirdaddonh1 = document.getElementById("thirdaddonh1");
+
 let previousDiv = null;
 
 clickdivs.forEach((clickdiv) => {
@@ -215,13 +221,17 @@ checkboxes.forEach(checkbox => {
             console.log('Checkbox checked:', event);
             if (parentDiv) {
                 parentDiv.style.backgroundColor = ' hsl(231, 100%, 99%)'; 
-                parentDiv.style.borderColor = "hsl(228, 100%, 84%)"
+                parentDiv.style.borderColor = "hsl(228, 100%, 84%)";
+                firstaddonh1.textContent = parentDiv.querySelector('#onl h1').textContent.trim();
+                secondaddonh1.textContent = parentDiv.querySelector('#lar h1').textContent.trim();
+                thirdaddonh1.textContent = parentDiv.querySelector('#cus h1').textContent.trim();
+
             }
         } else {
             console.log('Checkbox unchecked');
             if (parentDiv) {
                 parentDiv.style.backgroundColor = ''; 
-                                parentDiv.style.borderColor = ""
+                parentDiv.style.borderColor = "";
             }
 
 
