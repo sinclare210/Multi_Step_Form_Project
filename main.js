@@ -225,25 +225,9 @@ const checkboxes = document.querySelectorAll('input[type="checkbox"]');
 
 const clickrs = document.querySelectorAll(".clickr");
 
-// checkboxes.forEach(checkbox => {
-//     checkbox.addEventListener("change", (event) =>{
-//        if(event.target.checked == true){
-//         console.log(event)
-//         clickrs.forEach((clickr) => {
-
-//         })
-//        }else{
-//         console.log("ok")
-//        }
-       
-        
-        
-//     })
-// })
-// Select all checkboxes
 
 
-// Iterate over each checkbox
+
 checkboxes.forEach(checkbox => {
     checkbox.addEventListener("change", (event) => {
         const checkbox = event.target;
