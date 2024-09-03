@@ -560,8 +560,20 @@ video {
   position: fixed;
 }
 
+.absolute{
+  position: absolute;
+}
+
+.relative{
+  position: relative;
+}
+
 .bottom-0{
   bottom: 0px;
+}
+
+.top-0{
+  top: 0px;
 }
 
 .mx-auto{
@@ -631,6 +643,14 @@ video {
 
 .h-screen{
   height: 100vh;
+}
+
+.h-6{
+  height: 1.5rem;
+}
+
+.h-64{
+  height: 16rem;
 }
 
 .w-10{
@@ -836,8 +856,56 @@ video {
   background-color: hsl(0 0% 100% / var(--tw-bg-opacity));
 }
 
+.bg-\[\]{
+  background-color: ;
+}
+
 .bg-\[url\(\'\.\/images\/bg-sidebar-desktop\.svg\'\)\]{
   background-image: url('./images/bg-sidebar-desktop.svg');
+}
+
+.bg-\[url\(\'\.\/images\/bg-sidebar-deskto\.svg\'\)\]{
+  background-image: url('./images/bg-sidebar-deskto.svg');
+}
+
+.bg-\[url\(\'\.\/images\/bg-sidebar-deskt\.svg\'\)\]{
+  background-image: url('./images/bg-sidebar-deskt.svg');
+}
+
+.bg-\[url\(\'\.\/images\/bg-sidebar-desk\.svg\'\)\]{
+  background-image: url('./images/bg-sidebar-desk.svg');
+}
+
+.bg-\[url\(\'\.\/images\/bg-sidebar-des\.svg\'\)\]{
+  background-image: url('./images/bg-sidebar-des.svg');
+}
+
+.bg-\[url\(\'\.\/images\/bg-sidebar-de\.svg\'\)\]{
+  background-image: url('./images/bg-sidebar-de.svg');
+}
+
+.bg-\[url\(\'\.\/images\/bg-sidebar-d\.svg\'\)\]{
+  background-image: url('./images/bg-sidebar-d.svg');
+}
+
+.bg-\[url\(\'\.\/images\/bg-sidebar-\.svg\'\)\]{
+  background-image: url('./images/bg-sidebar-.svg');
+}
+
+.bg-\[url\(\'\.\/images\/bg-sidebar-m\.svg\'\)\]{
+  background-image: url('./images/bg-sidebar-m.svg');
+}
+
+.bg-\[url\(\'\.\/images\/bg-sidebar-mo\.svg\'\)\]{
+  background-image: url('./images/bg-sidebar-mo.svg');
+}
+
+.bg-\[url\(\'\.\/images\/bg-sidebar-mobil\.svg\'\)\]{
+  background-image: url('./images/bg-sidebar-mobil.svg');
+}
+
+.bg-\[url\(\'\.\/images\/bg-sidebar-mobile\.svg\'\)\]{
+  background-image: url('./images/bg-sidebar-mobile.svg');
 }
 
 .bg-contain{
@@ -846,6 +914,10 @@ video {
 
 .bg-cover{
   background-size: cover;
+}
+
+.bg-top{
+  background-position: top;
 }
 
 .bg-no-repeat{
@@ -1118,7 +1190,17 @@ input:checked + .slider:before {
   --tw-ring-color: hsl(228 100% 84% / var(--tw-ring-opacity));
 }
 
+@media (min-width: 640px){
+  .sm\:absolute{
+    position: absolute;
+  }
+}
+
 @media (min-width: 1024px){
+  .lg\:relative{
+    position: relative;
+  }
+
   .lg\:rounded-l-lg{
     border-top-left-radius: 0.5rem;
     border-bottom-left-radius: 0.5rem;
