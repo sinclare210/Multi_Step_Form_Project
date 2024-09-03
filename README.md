@@ -58,7 +58,7 @@ Users should be able to:
 
 ### What I learned
 
-I lernt about the checkbox event, my first time using it actually. This project has made me understand how to use event in javascript to manipulate functionality.
+I learnt about the checkbox event, my first time using it actually. This project has made me understand how to use event in javascript to manipulate functionality.
 
 
 ## Author
